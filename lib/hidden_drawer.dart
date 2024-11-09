@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 import 'package:the3d_objects/homepage.dart';
+import 'package:the3d_objects/page_transition.dart';
+import 'package:the3d_objects/popup.dart';
 import 'package:the3d_objects/settings.dart';
 
 class HiddenDrawer extends StatefulWidget {
@@ -36,7 +38,27 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
                 colorLineSelected: Colors.deepPurple
                 ),
                 
-          const SettingsScreen())
+          const SettingsScreen()),
+
+          ScreenHiddenDrawer(
+          ItemHiddenMenu(
+              name: 'Popup',
+               baseStyle: myTextStyle,
+                selectedStyle: myTextStyle,
+                colorLineSelected: Colors.deepPurple
+                ),
+                
+          const PopupScreen()),
+
+          ScreenHiddenDrawer(
+          ItemHiddenMenu(
+              name: 'Page Transition',
+               baseStyle: myTextStyle,
+                selectedStyle: myTextStyle,
+                colorLineSelected: Colors.deepPurple
+                ),
+                
+          const PageTransitionScreen()),
     ];
   }
 
